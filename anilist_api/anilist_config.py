@@ -1,2 +1,3 @@
-aniclient = 'animesoc-mcltu'
-anisecret = 'iz4q8z7A6sufjtxEo1h15xNR'
+aniclient = 'sorc278-wrxqd'
+anisecret = 'x6I2KBIXNVeN2cgMSpqo'
+pickle_path = 'token.pickle' #pickle_pee, pump-a-rum? No? okay - Sorc
