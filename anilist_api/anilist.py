@@ -26,6 +26,9 @@ def populate_series_item(series_obj):
     series_obj.synopsis = info['description']
     series_obj.cover_link = info['coverImage']['large']
     series_obj.ani_link = 'https://anilist.co/{0!s}/{1!s}'.format(str(series_obj.series_type), str(series_obj.api_id))
+    if info['idMal'] is not None:
+        series_obj.mal_link = 'https://myanimelist.net/{0!s}/{1!s}'.format(str(series_obj.series_type).lower(),
+                                                                           str(info['idMal']))
 
 
 def api_get_info(series_obj):
@@ -33,6 +36,7 @@ def api_get_info(series_obj):
     query ($id: Int) { # Define which variables will be used in the query (id)
       Media (id: $id) { # Insert our variables into the query arguments (id) (type: ANIME is hard-coded in the query)
         id
+        idMal
         title {
             romaji
             english
