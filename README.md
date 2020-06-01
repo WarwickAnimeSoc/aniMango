@@ -22,10 +22,3 @@ API Documentation can be found [here](https://github.com/WarwickAnimeSoc/aniMang
 ### Pull requests
 
 In the event that you see something in here that could be improved, feel free to create a pull request and the webmaster will attempt to merge the change into the repo. For general suggestions, please create a issue, join the society Discord server, or email the webmaster at warwickanimesoc@gmail.com
-
-## TODO
-
-- Fix the homepage events bar on mobile
-- Implement Karaoke list and request system
-- Fix Forums
-- Update dependancies
