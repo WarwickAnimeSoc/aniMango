@@ -1,4 +1,4 @@
-Django==2.2.12
+Django==2.2.13
 django-wysiwyg==0.8.0
 html5lib==0.9999999
 Pillow==6.2.2
