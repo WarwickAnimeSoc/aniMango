@@ -15,6 +15,7 @@ class Song(models.Model):
 
     class Meta:
         verbose_name_plural = "songs"
+        unique_together = ('title', 'artist')
 
 
 class Request(models.Model):

@@ -20,6 +20,11 @@ class RequestAdmin(admin.ModelAdmin):
         'cancel'
     )
 
+    search_fields = (
+        'artist',
+        'title'
+    )
+
     def complete(self, request, queryset):
         for request_obj in queryset:
             try:
@@ -36,6 +41,26 @@ class RequestAdmin(admin.ModelAdmin):
     cancel.short_description = "Cancel the request"
 
 
-admin.site.register(Song)
+class ArchivedRequestAdmin(admin.ModelAdmin):
+
+    list_display = (
+        'ultrastar_url',
+        'status'
+    )
+
+class SongAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'artist',
+        'series'
+    )
+
+    search_fields = (
+        'artist',
+        'title'
+    )
+
+
+admin.site.register(Song, SongAdmin)
 admin.site.register(Request, RequestAdmin)
-admin.site.register(ArchivedRequest)
+admin.site.register(ArchivedRequest, ArchivedRequestAdmin)

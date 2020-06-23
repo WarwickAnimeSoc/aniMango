@@ -12,6 +12,7 @@ aniMango/urls\.py
 aniMango/bleach_html\.py
 news/news_config\.py
 library/management/commands/authdetails\.json
+karaoke/management/commands/authdetails\.json
 .well-known/
 security/
 static/
