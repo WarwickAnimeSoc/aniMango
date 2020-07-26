@@ -19,7 +19,12 @@
                     <dl>
                         {% for show in showing.show_set.all %}
                             <dt>
-                                {{ show.lib_series.title_eng }} {% if cd_search %}
+                                {% if show.lib_series.title_eng %}
+                                {{ show.lib_series.title_eng }}
+                                {% else %}
+                                {{ show.lib_series.title }}
+                                {%  endif %}
+                                {% if cd_search %}
                                 <b>(CD until {{ show.lib_series.get_cooldown_date|date:"Y-m-d" }})</b>{% endif %}
 
                                 <div class="right">

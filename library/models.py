@@ -34,7 +34,7 @@ class Series(models.Model):
         if self.title and self.title_eng and self.series_type:
             return '{0!s}: {1!s}'.format(self.series_type, self.nice_title())
         else:
-            return 'Unknown series'
+            return '{0!s}: {1!s}'.format(self.series_type, self.title)
 
     # Tell django that the plural of 'series' is 'series' for the admin screen
     class Meta:
