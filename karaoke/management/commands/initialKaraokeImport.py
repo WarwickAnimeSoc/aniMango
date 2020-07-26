@@ -31,7 +31,7 @@ def update_sheet(x, y, value):
     credentials = ServiceAccountCredentials.from_json_keyfile_name('karaoke/management/commands/authdetails.json', scope)
     client = gspread.authorize(credentials)
 
-    sheet = client.open("Library list Current").sheet1
+    sheet = client.open("Karaoke List Import").sheet1
     sheet.update_cell(y, x, value)
 
 # Command -> Mostly taken from the library update command
