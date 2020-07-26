@@ -35,7 +35,7 @@
                     <li><a href="{% url 'site_info:gdpr' %}">GDPR</a></li>
                 </ul>
 
-                <!--DROPDOWN FOR SITE INFO ON DESKTOP-->
+                <!--DROPDOWN FOR KARAOKE ON DESKTOP-->
                 <ul id="karaoke-dropdown" class="dropdown-content">
                     <li><a href="{% url 'karaoke:index' %}">List</a></li>
                     <li><a href="{% url 'karaoke:request_song' %}">Requests</a></li>
@@ -104,6 +104,18 @@
                     <li><a href="{% url 'forum:index' %}">Forum</a></li>
                     <li><a href="{% url 'showings:schedule' %}">Showings</a></li>
                     <li><a href="{% url 'library:index' %}">Library</a></li>
+                    <ul class="collapsible collapsible-accordian">
+                        <li>
+                            <a class="collapsible-header waves-effect">Karaoke</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <!--DROPDOWN FOR KARAOKE ON MOBILE-->
+                                    <li><a href="{% url 'karaoke:index' %}">List</a></li>
+                                    <li><a href="{% url 'karaoke:request_song' %}">Requests</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
                     <li><a href="{% url 'archive:index' %}">Archive</a></li>
 
                     <ul class="collapsible collapsible-accordian">
