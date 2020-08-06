@@ -1,5 +1,7 @@
 from django import forms
 from django.core.validators import RegexValidator
+from django.db import IntegrityError
+
 
 from karaoke.models import Request
 
@@ -25,5 +27,8 @@ class RequestForm(forms.Form):
             r.artist = self.cleaned_data['artist']
             r.ultrastar_url = self.cleaned_data['ultrastar_url']
             r.anilist_url = self.cleaned_data['anilist_url']
-            r.save()
+            try:
+                r.save()
+            except IntegrityError:
+                return False
             return True
