@@ -1,5 +1,6 @@
 from django.contrib import admin, messages
 from django.core.exceptions import ValidationError
+from django.utils.html import format_html
 
 from .models import Song, Request, ArchivedRequest
 
@@ -12,7 +13,7 @@ class RequestAdmin(admin.ModelAdmin):
     list_display = (
         'title',
         'artist',
-        'ultrastar_url'
+        'show_ultrastar_url'
     )
 
     actions = (
@@ -24,6 +25,9 @@ class RequestAdmin(admin.ModelAdmin):
         'artist',
         'title'
     )
+
+    def show_ultrastar_url(self, obj):
+        return format_html("<a href='{url}' target=\"_blank\">{url}</a>", url=obj.ultrastar_url)
 
     def complete(self, request, queryset):
         for request_obj in queryset:
