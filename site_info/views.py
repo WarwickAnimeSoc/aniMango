@@ -61,3 +61,15 @@ def history(request):
 
 def discord(request):
     return HttpResponseRedirect("https://discordapp.com/invite/GYM6ay7")
+
+
+def facebook(request):
+    return HttpResponseRedirect("https://facebook.com/groups/warwickanimesoc")
+
+
+def warwicksu(request):
+    return HttpResponseRedirect("https://warwicksu.com/societies-sports/societies/animeandmanga")
+
+
+def malclub(request):
+    return HttpResponseRedirect("https://myanimelist.net/clubs.php?cid=78196")
