@@ -32,12 +32,12 @@ def gdpr(request):
     return render(request, 'site_info/gdpr.html')
 
 
-def contact(request):
-    return render(request, 'site_info/contact.html')
+# def contact(request):
+#     return render(request, 'site_info/contact.html')
 
 
-def about(request):
-    return render(request, 'site_info/about.html')
+# def about(request):
+#     return render(request, 'site_info/about.html')
 
 
 def exec_people(request, year):
