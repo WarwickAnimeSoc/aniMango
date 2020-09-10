@@ -60,7 +60,7 @@ def history(request):
 
 
 def discord(request):
-    return HttpResponseRedirect("https://discordapp.com/invite/GYM6ay7")
+    return HttpResponseRedirect("https://discord.gg/JaYTGfu")
 
 
 def facebook(request):
