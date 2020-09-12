@@ -57,6 +57,8 @@
     <title>
         {% block title %}Base Template{% endblock %} | Warwick Anime and Manga Society
     </title>
+    {% block head %}
+    {% endblock %}
 </head>
 
 <body>
@@ -105,5 +107,7 @@
         type="text/javascript"
         src="{% static 'js/anime.js' %}">
 </script>
+{% block javascript %}
+{% endblock %}
 </body>
 </html>

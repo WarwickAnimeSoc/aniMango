@@ -35,6 +35,11 @@
                 </ul>
 
                 <!--DROPDOWN FOR KARAOKE ON DESKTOP-->
+                <ul id="karaoke-dropdown" class="dropdown-content">
+                    <li><a href="{% url 'karaoke:index' %}">List</a></li>
+                    <li><a href="{% url 'karaoke:request_song' %}">Requests</a></li>
+                </ul>
+
                 <ul class="right right-menu-style hide-on-med-and-down">
                     <li class="nav-item"><a href="{% url 'events:upcoming' page=1 %}">Events</a></li>
                     <li class="nav-item"><a href="{% url 'news:latest' category='All' page='1' %}">News</a></li>
@@ -63,10 +68,6 @@
                     </li>
                 </ul>
 
-                <ul id="karaoke-dropdown" class="dropdown-content">
-                    <li><a href="{% url 'karaoke:index' %}">List</a></li>
-                    <li><a href="{% url 'karaoke:request_song' %}">Requests</a></li>
-                </ul>
 
                 <!--MOBILE MENU BEGINS-->
                 <ul class="side-nav" id="mobile-menu">

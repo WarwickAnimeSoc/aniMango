@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Stream
+{% endblock %}
+
+{% block head %}
+    <meta name="robots" content="noindex">
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+    <h4 class="center-align">Stream</h4>
+    <div class="valign-wrapper center-block" style="width: 80%">
+        <video id="stream" class="video-js" controls preload="none"
+               data-setup="{}">
+            <source src="{{ stream_source }}" type="application/x-mpegURL"/>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+    <script>
+        videojs.addLanguage('en', {"The media could not be loaded, either because the server or network failed or because the format is not supported.": "We are not currently streaming."});
+        var player = videojs('stream');
+        player.fluid(true);
+    </script>
+{% endblock %}

@@ -32,14 +32,6 @@ def gdpr(request):
     return render(request, 'site_info/gdpr.html')
 
 
-# def contact(request):
-#     return render(request, 'site_info/contact.html')
-
-
-# def about(request):
-#     return render(request, 'site_info/about.html')
-
-
 def exec_people(request, year):
     year_choices = Exec.objects.values('academic_year').distinct().order_by('-academic_year')
     exec_members = Exec.objects.filter(academic_year=year).order_by('place_in_list');
