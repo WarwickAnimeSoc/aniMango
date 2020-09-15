@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Views
+{% endblock %}
+
+{% block head %}
+    <meta name="robots" content="noindex">
+{% endblock %}
+
+{% block content %}
+    {% if user.is_staff %}
+        <h1>Views: {{ views }}</h1>
+    {% endif %}
+{% endblock %}
+

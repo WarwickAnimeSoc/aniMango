@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import ViewCounter
+
+
+class ViewCounterAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(ViewCounter, ViewCounterAdmin)

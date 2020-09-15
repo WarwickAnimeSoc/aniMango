@@ -31,4 +31,33 @@
         var player = videojs('stream');
         player.fluid(true);
     </script>
+    <script>
+	    var length = 15;
+	    var token_chars = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+        var token = "";
+
+	    function generate() {
+	        for (var i = 1; i < length; i++) {
+	            var index = Math.ceil(Math.random() * token_chars.length) - 1;
+	            token = token + token_chars[index];
+            }
+        }
+
+        function send_token() {
+	        var xhttp = new XMLHttpRequest();
+	        xhttp.open('GET', 'viewtick/' + token, true);
+	        xhttp.send();
+        }
+
+        function timer_loop() {
+	        setInterval(send_token, 60000);
+        }
+
+        $( document ).ready(function() {
+            generate();
+            timer_loop();
+        })
+
+
+    </script>
 {% endblock %}
