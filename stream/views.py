@@ -11,7 +11,6 @@ def stream(request):
 
 
 def view(request, token):
-    print('Poggers' + token)
     view_counter = ViewCounter.objects.get(id=1)
     try:
         view_object = View.objects.get(token=token)
