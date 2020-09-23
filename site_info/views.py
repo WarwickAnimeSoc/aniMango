@@ -65,3 +65,7 @@ def warwicksu(request):
 
 def malclub(request):
     return HttpResponseRedirect("https://myanimelist.net/clubs.php?cid=78196")
+
+
+def discordguide(request)
+    return HttpResponseRedirect("https://docs.google.com/document/d/1KsUpA6euakmBq09rXux_HK0TTEog45C49pByP4iVjCg/edit")

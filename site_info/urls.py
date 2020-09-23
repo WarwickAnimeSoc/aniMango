@@ -10,10 +10,10 @@ urlpatterns = [
 	url(r'^facebook/$', views.facebook, name='facebook'),
 	url(r'^warwicksu/$', views.warwicksu, name='warwicksu'),
 	url(r'^malclub/$', views.malclub, name='malclub'),
+	url(r'^streamguide/$', views.discordguide, name='discordguide'),
 	url(r'^info/constitution/$', views.constitution, name='constitution'),
 	url(r'^info/gdpr/$', views.gdpr, name='gdpr'),
 	url(r'^info/history/$', views.history, name='history'),
 	url(r'^info/exec/(?P<year>[0-9]{4})/$', views.exec_people, name='exec'),
 	url(r'^.well-known/acme-challenge/OpMjI1AgutHX3wnwKKpNP_LqC58Ety5pIhqRu5FNbnQ/$', views.ssl, name='ssl'),
-
 ]
