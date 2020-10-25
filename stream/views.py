@@ -1,4 +1,4 @@
-from django.core.exceptions import ValidationError
+from django.db import IntegrityError
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.utils import timezone
@@ -25,7 +25,7 @@ def view(request, token):
         try:
             new_view = View(counter=view_counter, token=token, last_update=timezone.now())
             new_view.save()
-        except ValidationError:
+        except IntegrityError:
             return redirect('stream:stream')
 
     return redirect('stream:stream')
