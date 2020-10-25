@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.utils import timezone
@@ -21,8 +22,11 @@ def view(request, token):
         view_object.last_update = timezone.now()
         view_object.save()
     else:
-        new_view = View(counter=view_counter, token=token, last_update=timezone.now())
-        new_view.save()
+        try:
+            new_view = View(counter=view_counter, token=token, last_update=timezone.now())
+            new_view.save()
+        except ValidationError:
+            return redirect('stream:stream')
 
     return redirect('stream:stream')
 

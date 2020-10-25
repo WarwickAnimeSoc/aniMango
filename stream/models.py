@@ -24,7 +24,7 @@ class ViewCounter(models.Model):
 
 class View(models.Model):
     counter = models.ForeignKey(ViewCounter, on_delete=models.CASCADE)
-    token = models.CharField(max_length=20)
+    token = models.CharField(max_length=20, unique=True)
     last_update = models.DateTimeField()
 
 
