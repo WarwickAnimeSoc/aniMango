@@ -1,6 +1,6 @@
 # aniMango
 
-## This website will be replaced by [TengenToppaAnimango](https://github.com/WarwickAnimeSoc/TengenToppaAnimango) and is on life-support until the new site is done.
+> :warning: This website will be replaced by [TengenToppaAnimango](https://github.com/WarwickAnimeSoc/TengenToppaAnimango) and is on life-support until the new site is done.
 
 Animu, Mango, managed with Django - aniMango!
 
