@@ -1,4 +1,4 @@
-# aniMango
+# [Deprecated] aniMango
 
 > :warning: This website has been replaced by [TengenToppaAnimango](https://github.com/WarwickAnimeSoc/TengenToppaAnimango).
 
